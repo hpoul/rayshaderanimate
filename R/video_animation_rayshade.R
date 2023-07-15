@@ -76,8 +76,7 @@ video_animation_rayshade <- function(gpx_table,
     if (class(bbox_arcgis) == "list") {
       message("Downloading overlay image")
       overlay_img <- get_image_overlay(bbox_arcgis)
-      }
-    if (class(bbox_arcgis) == "list") {
+      } else {
       overlay_img <- bbox_arcgis
     }
       elev_elem <- elev_elem %>% add_overlay(overlay_img, alphalayer = image_overlay_alpha)
