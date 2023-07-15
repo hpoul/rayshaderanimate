@@ -106,7 +106,7 @@ video_animation <- function(gpx_table = NULL, elevdata_long = NULL, number_of_sc
     all_paths <- tempfile(fileext = ".txt")
     
     writeLines(con = all_paths,
-               paste0("file '",tempdir(), "\\video", c(1:length(video_indeces),rep(length(video_indeces), 24)), ".png'")
+               paste0("file '",file.path(tempdir(), "video"), c(1:length(video_indeces),rep(length(video_indeces), 24)), ".png'")
                
     )
     
