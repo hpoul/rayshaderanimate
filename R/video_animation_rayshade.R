@@ -46,8 +46,9 @@ video_animation_rayshade <- function(gpx_table,
                                      ),
                                      overwrite = TRUE
                                      ) {
-  
-  stopifnot(grepl("ffmpeg",Sys.getenv("PATH")))
+
+  # this check doesn't make sense, if ffmpeg is in /usr/bin for example..
+  #stopifnot(grepl("ffmpeg",Sys.getenv("PATH")))
   
   video_indeces <- get_video_indeces(time_data = gpx_table$time_right, number_of_screens = number_of_screens)
   
